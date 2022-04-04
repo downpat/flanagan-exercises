@@ -59,3 +59,26 @@ speakPhrases.talk = () => {
 console.log('speakPhrases.talk(): '+speakPhrases.talk())	//=> undefined undefined
 
 console.log('Arrow methods do not support "this" usage')
+console.log(`Actually, arrow methods DO support "this" usage, they just have a
+different scope. With a "function" method, "this" refers to the method's parent
+object. With an arrow method, "this" refers to the parent module the function
+was defined within`)
+
+console.log()
+console.log('Factorial implementation')
+
+const factorial = n => {
+  let product = 1;
+  while(n > 1) {
+    product *= n;
+    n--;
+  }
+
+  return product
+}
+
+console.dir(factorial)
+
+console.log(`Factorial 4: ${factorial(4)}`)
+console.log(`Factorial 50: ${factorial(50)}`)
+console.log(`Factorial 978: ${factorial(978)}`)
